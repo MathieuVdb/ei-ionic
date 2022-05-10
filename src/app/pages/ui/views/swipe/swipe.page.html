@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-toolbar color="warning">
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Swipe</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <swiper [config]="config"> 
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-header><ion-card-title>Slide 1</ion-card-title></ion-header>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-header><ion-card-title>Slide 2</ion-card-title></ion-header>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-header><ion-card-title>Slide 3</ion-card-title></ion-header>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-header><ion-card-title>Slide 4</ion-card-title></ion-header>
+      </ion-card>
+    </ng-template>
+    <ng-template swiperSlide>
+      <ion-card>
+        <ion-header><ion-card-title>Slide 5</ion-card-title></ion-header>
+      </ion-card>
+    </ng-template> 
+  </swiper>
+
+</ion-content>

@@ -1,0 +1,29 @@
+
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Content</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [scrollEvents]="true" (ionScroll)="scrolling()" (ionScrollStart)="scrollStart()" (ionScrollEnd)="scrollEnd()">
+  <div class="big">
+    <ion-button expand="block" fill="outline"  (click)="scrollBottom()">Scroll to bottom</ion-button>
+
+    <ion-button expand="block" (click)="toggleMenu()">Ouvrir Le menu</ion-button>
+  </div>
+
+  <p slot="fixed">Hello World</p>
+
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+  <ion-button expand="block" fill="outline"  (click)="scrollTop()">Scroll to top</ion-button>
+
+
+</ion-content>

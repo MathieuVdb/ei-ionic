@@ -1,0 +1,68 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Grid</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col sizeLg="2" sizeMd="3" sizeSm="4" sizeXs="6" *ngFor="let item of [].constructor(4)">
+        <ion-card class="ion-padding">
+          <ion-icon name="fish-outline"></ion-icon>
+        </ion-card>
+      </ion-col>
+    </ion-row>  
+  </ion-grid>
+
+  <ion-fab slot="fixed" horizontal="end" vertical="bottom">
+    <ion-fab-button color="warning">
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="logo-angular"></ion-icon>
+      </ion-fab-button>
+
+      <ion-fab-button>
+        <ion-icon name="logo-apple"></ion-icon>
+      </ion-fab-button>
+
+      <ion-fab-button>
+        <ion-icon name="logo-android"></ion-icon>
+      </ion-fab-button> 
+    </ion-fab-list>
+  </ion-fab>
+  
+
+  <ion-fab slot="fixed" horizontal="center" vertical="center">
+    <ion-fab-button color="danger">
+      <ion-icon name="beer"></ion-icon>
+    </ion-fab-button>
+    
+    <ion-fab-list side="top">
+      <ion-fab-button>
+        <ion-icon name="notifications-off"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="bottom">
+      <ion-fab-button>
+        <ion-icon name="notifications-off"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="start">
+      <ion-fab-button>
+        <ion-icon name="bar-chart"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+    <ion-fab-list side="end">
+      <ion-fab-button>
+        <ion-icon name="barbell"></ion-icon>
+      </ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+</ion-content>

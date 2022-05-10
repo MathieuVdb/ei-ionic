@@ -1,22 +1,34 @@
 <ion-header>
-  <ion-toolbar>
+  <ion-toolbar color="danger">
     <ion-buttons slot="start">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title>Personnages</ion-title>
   </ion-toolbar>
+  <ion-header>
+    <ion-searchbar 
+      color="medium" 
+      type="text"
+      showCancelButton="focus" 
+      cancelButtonText="nope" 
+      cancelButtonIcon="fish" 
+      placeholder="Exemple : Annakin, R2D2, ..."
+      enterkeyhint="search"
+      (ionChange)="filterArray()"
+      [(ngModel)]="search"
+      debounce="1000">
+    </ion-searchbar>
+  </ion-header>
 </ion-header>
 
-<ion-content class="ion-padding">
-  <ng-container *ngrxLet="personnages$; let personnages">
-    <ion-list>
-      <ion-list-header>Personnages</ion-list-header>
-      <ion-item *ngFor="let perso of personnages">
-        <ion-label>
-          <h3>{{perso.name}}</h3>
-          <p>Né le {{perso.birth_year}}</p>
-        </ion-label>
-      </ion-item>
-    </ion-list>
-  </ng-container>
+<ion-content class="ion-padding"> 
+  <ion-list>
+    <ion-list-header>Personnages</ion-list-header>
+    <ion-item *ngFor="let perso of displayed">
+      <ion-label>
+        <h3>{{perso.name}}</h3>
+        <p>Né le {{perso.birth_year}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list> 
 </ion-content>

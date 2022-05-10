@@ -14,6 +14,10 @@ const routes: Routes = [
   {
     path: 'ui',
     loadChildren: () => import('./pages/ui/ui.module').then( m => m.UiPageModule)
+  },
+  {
+    path: 'personnages',
+    loadChildren: () => import('./pages/personnages/personnages.module').then( m => m.PersonnagesPageModule)
   }
 ];
 

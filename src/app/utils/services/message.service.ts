@@ -13,12 +13,13 @@ export class MessageService {
   }
 
   async createToast(message = 'Coffee time', 
-                    color: 'success'|'warning'|'danger' = 'warning') {
+                    color: 'success'|'warning'|'danger' = 'warning',
+                    position: 'top' | 'bottom' | 'middle' = 'bottom') {
     const config: ToastOptions = {
       message,
       icon: 'warning-outline',
       color,
-      position: 'top',
+      position,
       duration: 5000
     };
 

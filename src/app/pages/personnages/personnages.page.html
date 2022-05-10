@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Personnages</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ng-container *ngrxLet="personnages$; let personnages">
+    <ion-list>
+      <ion-list-header>Personnages</ion-list-header>
+      <ion-item *ngFor="let perso of personnages">
+        <ion-label>
+          <h3>{{perso.name}}</h3>
+          <p>Né le {{perso.birth_year}}</p>
+        </ion-label>
+      </ion-item>
+    </ion-list>
+  </ng-container>
+</ion-content>

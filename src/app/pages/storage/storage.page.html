@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Storage</ion-title>
+    <ion-buttons slot="end">
+      <ion-toggle color="dark" (ionChange)="setTheme()" [(ngModel)]="isDark"></ion-toggle>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  
+  <ion-button color="danger" fill="outline" (click)="delete()" expand="block">Clear storage</ion-button>
+
+</ion-content>

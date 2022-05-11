@@ -20,7 +20,7 @@ export class MessageService {
       icon: 'warning-outline',
       color,
       position,
-      duration: 5000
+      duration: 500
     };
 
     const toast = await this.toastController.create(config);

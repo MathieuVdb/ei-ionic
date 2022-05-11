@@ -31,3 +31,11 @@
 @import '~swiper/scss/pagination';
 @import '~swiper/scss/navigation';
 @import '~@ionic/angular/css/ionic-swiper';
+
+.input {
+    --background: var(--ion-color-medium);
+    --color: var(--ion-color-dark);
+    padding: 5px;
+    margin-bottom: 5px;
+    border: 1px var(--ion-color-dark) solid;
+}

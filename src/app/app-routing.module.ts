@@ -18,6 +18,14 @@ const routes: Routes = [
   {
     path: 'personnages',
     loadChildren: () => import('./pages/personnages/personnages.module').then( m => m.PersonnagesPageModule)
+  },
+  {
+    path: 'files',
+    loadChildren: () => import('./pages/files/files.module').then( m => m.FilesPageModule)
+  },
+  {
+    path: 'storage',
+    loadChildren: () => import('./pages/storage/storage.module').then( m => m.StoragePageModule)
   }
 ];
 

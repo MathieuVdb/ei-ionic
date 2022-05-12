@@ -34,6 +34,10 @@ const routes: Routes = [
   {
     path: 'login',
     loadChildren: () => import('./pages/login/login.module').then( m => m.LoginPageModule)
+  },
+  {
+    path: 'tracker',
+    loadChildren: () => import('./pages/tracker/tracker.module').then( m => m.TrackerPageModule)
   }
 ];
 

@@ -7,7 +7,8 @@ import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'; 
-import { IonicStorageModule } from '@ionic/storage-angular';
+import { IonicStorageModule } from '@ionic/storage-angular'; 
+import { NgIdleModule } from '@ng-idle/core';
 import { Drivers } from '@ionic/storage';
 
 @NgModule({
@@ -21,7 +22,8 @@ import { Drivers } from '@ionic/storage';
     IonicStorageModule.forRoot({
       name:'my_ion_storage',
       driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
-    })
+    }),
+    NgIdleModule.forRoot()
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

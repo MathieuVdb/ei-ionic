@@ -17,10 +17,8 @@ export class StorageService {
     private messageService : MessageService
   ) { }
 
-  async init() {
-    console.log('Initializing storage ...');
-    await this.storage.create();
-    console.log('Storage Created !');
+  async init() { 
+    await this.storage.create(); 
     this.ready$.next(true);
   }
 

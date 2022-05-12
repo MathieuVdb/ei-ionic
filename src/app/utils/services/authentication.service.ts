@@ -31,7 +31,9 @@ export class AuthenticationService {
         tap(res => {
           this.storage.set(this.key, res?.token);
           this.isLogged$.next(true);
-          this.setBiometric(user);
+          if(this.isBiometricAvailable()) {
+            this.setBiometric(user);
+          }
           this.messageService.createToast(`Bienvenue à toi !`, 'success', 'bottom');
         }),
         catchError((e) => {
@@ -48,7 +50,9 @@ export class AuthenticationService {
         tap(res => {
           console.log(res);
           this.isLogged$.next(true);
-          this.setBiometric(user);
+          if(this.isBiometricAvailable()) {
+            this.setBiometric(user);
+          }
           this.messageService.createToast(`Inscription Réussi`, 'success', 'bottom');
         }),
         catchError((e) => {

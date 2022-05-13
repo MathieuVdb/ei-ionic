@@ -8,8 +8,8 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http'; 
 import { IonicStorageModule } from '@ionic/storage-angular'; 
-import { NgIdleModule } from '@ng-idle/core';
 import { Drivers } from '@ionic/storage';
+import { NgIdleModule } from '@ng-idle/core';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,12 +18,12 @@ import { Drivers } from '@ionic/storage';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule, 
-    HttpClientModule,
+    HttpClientModule, 
+    NgIdleModule.forRoot(),
     IonicStorageModule.forRoot({
       name:'my_ion_storage',
       driverOrder: [Drivers.IndexedDB, Drivers.LocalStorage]
-    }),
-    NgIdleModule.forRoot()
+    })
   ],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
   bootstrap: [AppComponent],

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "875415553714",
+    "project_id": "ei-test-5e118",
+    "storage_bucket": "ei-test-5e118.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:875415553714:android:4acc6ee9003bda5fb7ebab",
+        "android_client_info": {
+          "package_name": "io.ionic.starter"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "875415553714-t8rkr3a4ei60oufqecgnj3s883mmpsjd.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDxb77f01x6Fpfx6ifYRT-1vlPH8YQ8JJw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "875415553714-t8rkr3a4ei60oufqecgnj3s883mmpsjd.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -42,6 +42,10 @@ const routes: Routes = [
   {
     path: 'geoloc',
     loadChildren: () => import('./pages/geoloc/geoloc.module').then( m => m.GeolocPageModule)
+  },
+  {
+    path: 'push-notif',
+    loadChildren: () => import('./pages/push-notif/push-notif.module').then( m => m.PushNotifPageModule)
   }
 ];
 

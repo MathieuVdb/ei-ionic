@@ -16,12 +16,19 @@
     </ion-card-header>
     <ion-card-content>
       <ion-list>
-        <ion-item>Latitude : {{position.coords.latitude}}</ion-item>
-        <ion-item>Longitude : {{position.coords.longitude}}</ion-item>
-        <ion-item>Accuracy : +/- {{position.coords.accuracy | number: '1.0-0' }}</ion-item>
-        <ion-item>Altitude : {{position.coords.altitude }}</ion-item>
+        <ion-item>Mise à jour n° {{ countdown }}</ion-item>
+        <ion-item>Latitude : {{ position.coords.latitude }}</ion-item>
+        <ion-item>Longitude : {{ position.coords.longitude }}</ion-item>
+        <ion-item>Accuracy : +/- {{ position.coords.accuracy | number: '1.0-0' }} m</ion-item>
+        <ion-item>Altitude : {{ position.coords.altitude }}</ion-item>
       </ion-list>
     </ion-card-content>
   </ion-card>
+  
+  <ion-fab slot="fixed" vertical="bottom" horizontal="end">
+    <ion-fab-button color="dark" (click)="getLocation()"> 
+      <ion-icon name="locate-outline"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
 
 </ion-content>

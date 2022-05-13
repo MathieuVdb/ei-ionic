@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
-import { Platform } from '@ionic/angular';
+import { FormControl, FormGroup, Validators } from '@angular/forms'; 
 import { AuthenticationService } from 'src/app/utils/services/authentication.service';
 
 @Component({

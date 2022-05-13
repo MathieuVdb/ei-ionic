@@ -38,6 +38,10 @@
               <ion-icon slot="start" name="magnet-outline"></ion-icon>
               <ion-label>Tracker</ion-label>
             </ion-item>
+            <ion-item [routerLink]="'geoloc'">    
+              <ion-icon slot="start" name="location-outline"></ion-icon>
+              <ion-label>Geolocation</ion-label>
+            </ion-item>
             <ion-item *ngIf="isLogged"> 
               <ion-button (click)="logout()" color="danger" fill="clear">Log Out</ion-button>
             </ion-item>

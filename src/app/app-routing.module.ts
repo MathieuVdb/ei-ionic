@@ -38,6 +38,10 @@ const routes: Routes = [
   {
     path: 'tracker',
     loadChildren: () => import('./pages/tracker/tracker.module').then( m => m.TrackerPageModule)
+  },
+  {
+    path: 'geoloc',
+    loadChildren: () => import('./pages/geoloc/geoloc.module').then( m => m.GeolocPageModule)
   }
 ];
 
